@@ -1,0 +1,75 @@
+* {
+  border: none;
+  font-family: 'Fira Code', 'Symbols Nerd Font Mono';
+  font-size: 13px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 25px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#workspaces {
+  border-radius: 10px;
+  background-color: #11111b;
+  color: #b4befe;
+  margin-top: 1px;
+  margin-right: 5px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#window {
+    margin: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #11111b;
+    font-size: 16px; /* Adjust font size here */
+    border-radius: 10px; /* Rounded corners */
+    color: #4bd9e9; /* Text color */
+}
+
+
+#custom-clipboard, #custom-vpn, #cpu, #temperature, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock, #custom-wlogout {
+  background-color: #11111b;
+  padding: 5px;
+  margin-right: 0;
+  border-radius: 0;
+  color: #b4befe;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+
+#cpu.high {
+    color: red;
+  }
+#cpu.medium {
+    color: orange;
+  }
+ 
+#custom-vpn.connected {
+    color: #16c450; /* Green for connected */
+}
+#custom-vpn.disconnected {
+    color: #e74c3c; /* Red for disconnected */
+}
+
+/* last item on the left side */
+#custom-clipboard {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+/* last item on the right side */
+#custom-wlogout {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: 0px;
+  padding-right: 15px;
+}

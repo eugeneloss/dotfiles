@@ -1,0 +1,134 @@
+{
+  "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/clipboard", "custom/vpn", "temperature", "cpu","backlight", "pulseaudio", "network", "battery", "clock", "custom/wlogout"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "wofi --show drun"
+    },
+"custom/clipboard": {
+  "interval": 1,
+  "format": "",
+  "on-click": "cliphist list | wofi -S dmenu | cliphist decode | wl-copy",
+  "tooltip": false
+},
+
+
+"temperature": {
+    "hwmon-path": [
+        "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
+    ],
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C ",
+    "format-critical": "{temperatureC}°C ",
+    "interval": 5
+},
+
+    "cpu": {
+    "interval": 10,
+    "format": "{usage}% ",
+    "states": {
+      "medium": 50,
+      "high": 80
+    },
+    "max-length": 10
+},
+    "custom/vpn": {
+      "interval": 3,
+      "format": "{}",
+      /* "exec": "ip add show | grep -qF surfshark_wg && echo 󱚿  || echo  ",*/
+      "exec": "/home/eugene/.config/vpn_check.sh",
+      "return-type": "json",
+      "max-length": "100",
+      "tooltip": true,
+      "tooltip": {},
+      "on-click": "surfshark"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": true,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    
+    "clock": {
+      "format": "<span color='#b4befe'></span>{:%H:%M}",
+        "timezone": "Europe/London",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%d-%m-%A}"
+    },
+
+    "custom/wlogout": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": ""  // Font Awesome lock icon
+    },
+    "tooltip": false, // Disable tooltip
+    "on-click": "wlogout" // Trigger Hyprlock when clicked
+  },
+
+    
+
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+
+    "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+      "format": "<span color='#b4befe'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#3acdec'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "interface": "wlp3s0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#14c5eb'> </span>",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": true,
+      "tooltip-format": "SSID: {}"
+
+
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    }
+
+
+
+}
