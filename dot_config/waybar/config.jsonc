@@ -47,8 +47,7 @@
       "on-click": "surfshark"
     },
     "hyprland/workspaces": {
-      "format": "{name}",
-      "format": "{icon}",
+      "format": "{name} {icon}",
       "tooltip": true,
       "all-outputs": true,
       "format-icons": {
@@ -117,16 +116,14 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-full": "{capacity}% {󰁹}",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
     }
 
 

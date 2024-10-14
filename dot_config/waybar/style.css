@@ -14,14 +14,14 @@ window#waybar {
   border-radius: 10px;
   background-color: #11111b;
   color: #b4befe;
-  margin-top: 1px;
+  margin-top: 0px;
   margin-right: 5px;
   padding-top: 1px;
   padding-left: 10px;
   padding-right: 10px;
 }
 #window {
-    margin: 2px;
+    margin: 0px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: #11111b;
