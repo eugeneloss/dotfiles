@@ -135,6 +135,15 @@ alias paste='cliphist list | wl-copy && wl-paste'  # Select from history and pas
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PAGER="most"
 
+
+function cdls() {
+    cd "$@" || return  # Change directory and handle errors
+    eza --group-directories-first --icons=always  # List directory contents
+}
+alias cd='cdls'
+
+
+
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
