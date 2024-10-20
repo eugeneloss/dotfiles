@@ -137,11 +137,11 @@ alias ll='eza --long --color=always --icons --group-directories-first -h'
 export PAGER="most"
 
 
+alias cdl='cdls'
 function cdls() {
     cd "$@" || return  # Change directory and handle errors
     eza --group-directories-first --icons=always  # List directory contents
 }
-alias cdl='cdls'
 
 
 
