@@ -31,7 +31,7 @@ window#waybar {
 }
 
 
-#custom-clipboard, #custom-vpn, #cpu, #temperature, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock, #custom-wlogout {
+#custom-disk, #custom-clipboard, #custom-vpn, #cpu, #temperature, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock, #custom-wlogout {
   background-color: #11111b;
   padding: 5px;
   margin-right: 0;
