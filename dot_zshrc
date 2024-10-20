@@ -14,6 +14,7 @@ export MOZ_ENABLE_WAYLAND=1  # For Firefox-based browsers
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# some additional information
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="powerlevel10k/powerlevel10k"
 # a theme from this variable instead of looking in $ZSH/themes/
