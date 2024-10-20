@@ -114,18 +114,14 @@ source $ZSH/oh-my-zsh.sh
 gitc() { git add .; git commit -m "$*:-New Changes"; git push; }
 eval "$(zoxide init --cmd cd zsh)"
 alias v="nvim"
-alias snv="sudo nvim"
-alias sp="sudo pacman"
 alias chx="chmod +x"
 alias rsync-copy="rsync -avzPh"
 alias rsync-move="rsync -avzPh --remove-source-files"
 alias rsync-update="rsync -avzuPh"
 alias rsync-synchronize="rsync -avzuPh --delete"
-alias open="xdg-open"
 alias wbr="killall -SIGUSR2 waybar"
 alias c='clear'
 alias u='sudo pacman -Suy'
-alias feh='feh --image-bg black -.'
 alias toclip='wl-copy'
 alias fromclip='wl-paste'
 alias copy='cliphist store < <(wl-paste)'  # Store clipboard history
