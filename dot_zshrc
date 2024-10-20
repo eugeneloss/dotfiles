@@ -130,7 +130,7 @@ alias toclip='wl-copy'
 alias fromclip='wl-paste'
 alias copy='cliphist store < <(wl-paste)'  # Store clipboard history
 alias paste='cliphist list | wl-copy && wl-paste'  # Select from history and paste
-alias ll='eza --long --color=always --icons --group-directories-first --human-readable'
+alias ll='eza --long --color=always --icons --group-directories-first -h'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
