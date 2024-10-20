@@ -59,7 +59,7 @@ window#waybar {
 }
 
 /* last item on the left side */
-#custom-clipboard {
+#custom-disk {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding-left: 15px;
