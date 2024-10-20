@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 MAGIC_ENTER_GIT_COMMAND='git status -u .'
-MAGIC_ENTER_OTHER_COMMAND='eza --color=always --icons --group-directories-first -h'
+MAGIC_ENTER_OTHER_COMMAND='eza --color=always --icons --long --group-directories-first -h'
 
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf gh magic-enter colored-man-pages)
