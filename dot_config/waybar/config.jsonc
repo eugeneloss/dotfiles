@@ -2,12 +2,15 @@
   "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/clipboard", "custom/vpn", "temperature", "cpu","backlight", "pulseaudio", "network", "battery", "clock", "custom/wlogout"],
-    "custom/arch": {
-      "format": "  ",
-      "tooltip": false,
-      "on-click": "wofi --show drun"
-    },
+    "modules-right": ["custom/disk", "custom/clipboard", "custom/vpn", "temperature", "cpu","backlight", "pulseaudio", "network", "battery", "clock", "custom/wlogout"],
+  "custom/disk": {
+    "format": " {}",
+    "exec": "df -h / | awk 'NR==2 {print $5}'",
+    "interval": 60,
+    "tooltip": false
+
+  },
+
 "custom/clipboard": {
   "interval": 1,
   "format": "",
